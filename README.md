@@ -6,6 +6,6 @@ This is a plugin for, and to be used with, [Interception Tools](https://gitlab.c
 
 ## building
 
-$ cmake -B build -DCMAKE_BUILD_TYPE=Release
-$ cmake --build build
-$ mv build/rightaltreplace /usr/bin
+    $ cmake -B build -DCMAKE_BUILD_TYPE=Release
+    $ cmake --build build
+    $ mv build/rightaltreplace /usr/bin
