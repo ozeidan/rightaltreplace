@@ -9,8 +9,6 @@ const struct input_event
 syn       = {.type = EV_SYN , .code = SYN_REPORT   , .value = 0};
 // clang-format on
 
-// KEY_RIGHTALT
-
 int read_event(struct input_event *event) {
     return fread(event, sizeof(struct input_event), 1, stdin) == 1;
 }
@@ -54,7 +52,10 @@ int main() {
 
         if (input.type == EV_KEY && input.code == KEY_RIGHTALT) {
             isRightAltPressed = input.value;
-        } else if (isRightAltPressed) {
+            continue;
+        } 
+
+        if (isRightAltPressed) {
             input.code = replaceCode(input.code);
         }
 
